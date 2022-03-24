@@ -79,6 +79,7 @@ class Program(tk.Tk):
         else:
             db_connect = self.dbstate.get().split('--->')[0]
             if(db_connect=='连接失败'):
+                self.log_data_Text.delete(1.0,END)
                 self.log_data_Text.insert(END,'数据库连接失败，请检查并重新连接！！！','tag1')
             else:
                 self.write_log_to_Text()
